@@ -8,6 +8,7 @@ opt.splitright = true -- Split to the right on vertical
 opt.splitbelow = true -- Split below when horizontal
 opt.swapfile = false -- Don't use swap files (I use auto-save.nvim instead)
 opt.wrap = true -- Wrap lines
+opt.clipboard="unnamedplus"
 
 vim.g.clipboard = {
   name = 'OSC 52',
