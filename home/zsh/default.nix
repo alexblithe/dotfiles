@@ -43,7 +43,8 @@
         ''
       ]
       ++ lib.optionals pkgs.stdenv.isDarwin [
-        (lib.mkOrder 500 ''eval "$(/opt/homebrew/bin/brew shellenv)"'')
+        ''eval "$(/opt/homebrew/bin/brew shellenv)"''
+        ''SOPS_AGE_KEY_FILE=~/.config/sops/age/keys.txt''
       ]
     );
   };
