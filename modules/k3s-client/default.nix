@@ -27,6 +27,7 @@
       runtime_engine = ""
       runtime_root = ""
       runtime_type = "io.containerd.runc.v2"
+      default_runtime_name = "nvidia"
   
       [plugins."io.containerd.grpc.v1.cri".containerd.runtimes.nvidia.options]
       BinaryName = "${pkgs.nvidia-container-toolkit.tools}/bin/nvidia-container-runtime.cdi"
