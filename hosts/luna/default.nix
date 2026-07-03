@@ -66,6 +66,4 @@
     kitty.terminfo
   ];
 
-  services.k3s.serverAddr = "https://luna:6443";
-
 }

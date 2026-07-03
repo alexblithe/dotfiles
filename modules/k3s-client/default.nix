@@ -16,9 +16,9 @@
 
   services.k3s = {
     enable = true;
-    role = "server"; 
+    role = "server";
     serverAddr = "https://luna:6443";
-    token = config.sops.secrets.k3s-token.path;
+    tokenFile = config.sops.secrets.k3s-token.path;
   };
 
 }
