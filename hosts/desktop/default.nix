@@ -44,7 +44,6 @@
   # hardware.amdgpu.opencl.enable = true;
   # hardware.amdgpu.initrd.enable = true;
   hardware.graphics.enable = true;
-  virtualisation.podman.enableNvidia = true;
   hardware.nvidia-container-toolkit.enable = true;
 
   hardware.nvidia = {
