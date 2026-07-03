@@ -13,6 +13,7 @@
     ../../modules/tailscale
     ../../modules/steam
     ../../modules/rustdesk
+    ../../modules/k3s-client
   ];
 
   hardware.enableRedistributableFirmware = true;
