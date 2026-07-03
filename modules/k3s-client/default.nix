@@ -13,14 +13,12 @@
   networking.firewall.allowedUDPPorts = [
     8472 # k3s, flannel: required if using multi-node for inter-node networking
   ];
+
   services.k3s = {
     enable = true;
-    role = "server";
-    extraFlags = toString [
-      # "--debug" # Optionally add additional args to k3s
-    ];
+    role = "server"; 
+    serverAddr = "https://luna:6443";
     token = config.sops.secrets.k3s-token.path;
-    clusterInit = true;
   };
 
 }
