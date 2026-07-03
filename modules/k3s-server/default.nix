@@ -19,7 +19,7 @@
     extraFlags = toString [
       # "--debug" # Optionally add additional args to k3s
     ];
-    token = config.sops.secrets.k3s-token.path;
+    tokenFile = config.sops.secrets.k3s-token.path;
     clusterInit = true;
   };
 
