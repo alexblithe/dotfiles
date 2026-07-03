@@ -49,6 +49,13 @@
             "context": 128000,
             "output": 65536
           }
+        },
+        "Minimax-M2.7": {
+          "name": "Minimax-M2.7",
+          "limit": {
+            "context": 90000,
+            "output": 65536
+          }
         }
       }
     }

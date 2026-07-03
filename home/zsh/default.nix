@@ -12,7 +12,7 @@
     oh-my-zsh = {
       enable = true;
       theme = "lambda";
-      plugins = [ "git" ];
+      plugins = [ "git" "kubectl" ];
     };
     shellAliases = {
       claude-gemma = "ANTHROPIC_BASE_URL=http://house-of-wind:8001 claude --model gemma-4-31B-it";
@@ -33,13 +33,19 @@
     // lib.optionalAttrs (pkgs.stdenv.isDarwin) {
       nixswitch = "darwin-rebuild switch --flake ~/Documents/dotfiles#$(hostname)";
     };
-    initContent = lib.mkMerge [
-      (lib.mkOrder 550 ''
-        fpath=(~/Documents/dotfiles/scripts $fpath)
-      '')
-      ''
-        source ~/Documents/dotfiles/scripts/llama-cpp.sh
-      ''
-    ];
+    initContent = lib.mkMerge (
+      [
+        (lib.mkOrder 550 ''
+          fpath=(~/Documents/dotfiles/scripts $fpath)
+        '')
+        ''
+          source ~/Documents/dotfiles/scripts/llama-cpp.sh
+        ''
+      ]
+      ++ lib.optionals pkgs.stdenv.isDarwin [
+        ''eval "$(/opt/homebrew/bin/brew shellenv)"''
+        ''SOPS_AGE_KEY_FILE=~/.config/sops/age/keys.txt''
+      ]
+    );
   };
 }
