@@ -45,6 +45,7 @@
   # hardware.amdgpu.initrd.enable = true;
   hardware.graphics.enable = true;
   hardware.nvidia-container-toolkit.enable = true;
+  hardware.nvidia-container-toolkit.mount-nvidia-executables = true;
 
   hardware.nvidia = {
     # Modesetting is required
@@ -71,6 +72,7 @@
   environment.systemPackages = with pkgs; [
     cudaPackages.cudatoolkit
     cudaPackages.cudnn
+    nvidia-container-toolkit
     rocmPackages.rocm-smi
     rocmPackages.clr
     rustdesk-flutter
