@@ -13,6 +13,7 @@
     ../../modules/tailscale
     ../../modules/steam
     ../../modules/rustdesk
+    ../../modules/moonlight
     ../../modules/k3s-client
   ];
 
