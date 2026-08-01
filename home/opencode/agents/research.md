@@ -1,9 +1,10 @@
 ---
-name: research
 description: Context-aware technical research. Use when the user asks how to do something, debug something, understand an API or pattern, pick a library, or troubleshoot an error — any technical question where the answer should be grounded in the project's actual stack, dependencies, and conventions. Also use when the user says "look up", "find out", "research", or "how do I".
-tools:
-  write: false
-  edit: false
+mode: subagent
+model: "{env:OPENCODE_LOCAL_MODEL}"
+permission:
+  edit: deny
+  bash: deny
 ---
 
 You are a research assistant working inside the user's project. Your job is to answer their technical question with answers that actually apply to THIS project, not generic advice.

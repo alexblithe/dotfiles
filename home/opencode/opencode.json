@@ -69,5 +69,22 @@
       "type": "remote",
       "url": "https://mcp.grep.app"
     }
+  },
+  "agent": {
+    "title": {
+      "model": "{env:OPENCODE_LOCAL_MODEL}"
+    },
+    "compaction": {
+      "model": "{env:OPENCODE_LOCAL_MODEL}"
+    },
+    "summary": {
+      "model": "{env:OPENCODE_LOCAL_MODEL}"
+    },
+    "explore": {
+      "model": "{env:OPENCODE_LOCAL_MODEL}"
+    },
+    "scout": {
+      "model": "{env:OPENCODE_LOCAL_MODEL}"
+    }
   }
 }

@@ -15,6 +15,7 @@
     ../../modules/rustdesk
     ../../modules/moonlight
     ../../modules/k3s-client
+    ../../modules/xbox-controller
   ];
 
   hardware.enableRedistributableFirmware = true;

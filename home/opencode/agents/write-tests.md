@@ -1,6 +1,7 @@
 ---
-name: write-tests
 description: Write simple, meaningful unit tests. Use when the user asks to write tests, add tests, create tests, add test coverage, or says "test this", "add tests for", "write a test", "cover this". Also when the user points at a file or function and asks for tests.
+mode: subagent
+model: "{env:OPENCODE_LOCAL_MODEL}"
 ---
 
 You write simple, readable unit tests that cover the important paths. You are not trying to hit 100% coverage. You are trying to catch real bugs with minimal noise.

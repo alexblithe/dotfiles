@@ -9,7 +9,7 @@
     # ../kitty
     # ../fonts
     # ../vscode
-    ../opencode
+    # ../opencode
     # ../claude-code
     ../helix
     #../zathura
