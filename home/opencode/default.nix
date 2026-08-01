@@ -9,7 +9,6 @@
     agents = {
       implementation = ./agents/implement.md;
       research = ./agents/research.md;
-      search = ./agents/search.md;
       writeTests = ./agents/write-tests.md;
     };
   };
