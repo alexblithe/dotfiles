@@ -1,6 +1,6 @@
 services:
     llama-cpp:
-        image: ghcr.io/ggml-org/llama.cpp:server-cuda
+        image: ghcr.io/ggml-org/llama.cpp:server-vulkan
         container_name: llama-cpp
         ports:
             - "8001:8001"
