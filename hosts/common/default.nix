@@ -40,7 +40,7 @@
   programs.nix-ld.enable = true;
 
   imports = [
-    ../../modules/firejail
+    #../../modules/firejail
     ../../modules/wireguard
   ];
 

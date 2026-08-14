@@ -21,7 +21,7 @@
     ../fonts
     ../rofi
     ../waybar
-    ../emu
+    #../emu
     ../syncthing
     ../chrome
     ../direnv
