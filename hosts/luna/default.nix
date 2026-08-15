@@ -19,6 +19,7 @@
     loader.systemd-boot.configurationLimit = 10;
     loader.efi.canTouchEfiVariables = true;
     kernelParams = [ "intel_pstate=active" ];
+    kernelModules = [ "sg" ];
   };
 
   powerManagement.cpuFreqGovernor = "performance";
@@ -65,6 +66,8 @@
 
   environment.systemPackages = with pkgs; [
     kitty.terminfo
+    makemkv
+    handbreak
   ];
 
 }
