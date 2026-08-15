@@ -78,6 +78,7 @@
     rocmPackages.rocm-smi
     rocmPackages.clr
     rustdesk-flutter
+    llama-cpp
   ];
 
   # Allow Open WebUI (port 3000) on Tailscale only
