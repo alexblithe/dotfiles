@@ -10,6 +10,7 @@
     ../../modules/containerization
     ../../modules/desktop
     ../../modules/k3s-server
+    ../../modules/nfs
   ];
 
   boot = {
