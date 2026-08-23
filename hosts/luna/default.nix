@@ -64,11 +64,10 @@
   systemd.targets.hibernate.enable = false;
   systemd.targets.hybrid-sleep.enable = false;
 
-  services.xserver.videoDrivers = [ "i915" ];
-
   environment.systemPackages = with pkgs; [
     kitty.terminfo
-    handbreak
+    handbrake
+    libdvdcss
   ];
 
 }

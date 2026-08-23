@@ -186,6 +186,7 @@
               };
             }
             ./hosts/luna
+            nixos-hardware.nixosModules.framework-13th-gen-intel
           ];
           specialArgs = { inherit self inputs; };
         };
