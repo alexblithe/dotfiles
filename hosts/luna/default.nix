@@ -66,7 +66,6 @@
 
   environment.systemPackages = with pkgs; [
     kitty.terminfo
-    makemkv
     handbreak
   ];
 
