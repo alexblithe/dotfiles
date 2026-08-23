@@ -1,7 +1,11 @@
 {...}:
 
 {
-  filesystems.nfs.server = {
+  #fileSystems."/export/share" = {
+#	device = "/var/share/";
+#	options = [ "bind" ];
+#  };
+  services.nfs.server = {
     enable = true;
     exports = ''
         /export luna(rw,nohide,no_subtree_check,fsid=0)
