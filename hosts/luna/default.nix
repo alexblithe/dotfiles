@@ -30,7 +30,13 @@
   systemd.services.display-manager.wantedBy = lib.mkForce [];
 
   # GPU acceleration
-  hardware.graphics.enable = true;
+  hardware.graphics = {
+  enable = true;
+  extraPackages = with pkgs; [
+    intel-media-driver
+    vpl-gpu-rt 
+  ];
+};
 
   # Audio (PipeWire)
   security.rtkit.enable = true;
