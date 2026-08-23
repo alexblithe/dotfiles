@@ -14,7 +14,7 @@
   ];
 
   boot = {
-    initrd.availableKernelModules = [ "usb_storage" "uas" "sd_mod" ];
+    initrd.availableKernelModules = [ "usb_storage" "uas" "sd_mod" "thunderbolt" ];
     loader.systemd-boot.enable = true;
     loader.systemd-boot.configurationLimit = 10;
     loader.efi.canTouchEfiVariables = true;
@@ -63,6 +63,8 @@
   systemd.targets.suspend.enable = false;
   systemd.targets.hibernate.enable = false;
   systemd.targets.hybrid-sleep.enable = false;
+
+  services.xserver.videoDrivers = [ "i915" ];
 
   environment.systemPackages = with pkgs; [
     kitty.terminfo
