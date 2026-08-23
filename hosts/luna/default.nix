@@ -31,12 +31,16 @@
 
   # GPU acceleration
   hardware.graphics = {
-  enable = true;
-  extraPackages = with pkgs; [
-    intel-media-driver
-    vpl-gpu-rt 
-  ];
-};
+    enable = true;
+    extraPackages = with pkgs; [
+      intel-media-driver
+      vpl-gpu-rt 
+    ];
+  };
+  # Enable Intel GPU acceleration for VA-API
+  environment.sessionVariables = { 
+    LIBVA_DRIVER_NAME = "iHD"; 
+  };
 
   # Audio (PipeWire)
   security.rtkit.enable = true;
