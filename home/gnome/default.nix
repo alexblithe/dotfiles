@@ -1,4 +1,7 @@
-{ config, pkgs, lib, ... }:
+{ pkgs,
+  lib,
+  hostname ? "",
+ ... }:
 
 {
   home.packages = with pkgs; [
@@ -133,17 +136,25 @@
 
     # Night Light: auto-schedule, 3500K
     "org/gnome/settings-daemon/plugins/color" = {
-      night-light-enabled = true;
+      night-light-enabled = false;
       night-light-schedule-automatic = true;
       night-light-temperature = lib.hm.gvariant.mkUint32 3500;
     };
 
     # Power: don't sleep on AC, 30min on battery
-    "org/gnome/settings-daemon/plugins/power" = {
+    "org/gnome/settings-daemon/plugins/power" = 
+    if hostname == "framework" then
+    {
       power-saver-profile-on-low-battery = true;
       sleep-inactive-ac-type = "nothing";
       sleep-inactive-battery-type = "suspend";
       sleep-inactive-battery-timeout = lib.hm.gvariant.mkInt32 1800;
+    }
+    else
+    {
+      power-saver-profile-on-low-battery = false;
+      sleep-inactive-ac-type = "nothing";
+      sleep-inactive-battery-type = "nothing";
     };
 
     # Nautilus: list view, hidden files, small zoom
