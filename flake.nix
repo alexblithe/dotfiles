@@ -114,6 +114,7 @@
           modules = [
             sops-nix.nixosModules.sops
             configuration
+	    ./hosts/framework/hardware-configuration.nix
             home-manager.nixosModules.home-manager
             {
               home-manager.sharedModules = [
