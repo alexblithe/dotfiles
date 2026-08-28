@@ -7,7 +7,7 @@
     settings = {
       devices = {
         "framework" = {
-          id = "X5AOQJ6-KKA3U5T-RG2W42D-7GO7OXV-L5EJSAZ-7VNHCMU-PICR53B-Y36AZAL";
+          id = "5R3BOOR-WR2FSUX-IVTMO7I-K7DVKO5-GZZFB2M-7UP5FM6-ML4FCA3-DWTYGAU";
         };
         "macbook" = {
           id = "ABXUGLL-TWN22MF-ZNHL3TW-HZ7JH47-PA4GIEF-FZX3MV2-E4L5XNC-N6FR4A6";
