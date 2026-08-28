@@ -12,6 +12,9 @@
     ../../modules/k3s-server
     ../../modules/nfs
   ];
+  # Hardware support
+  hardware.enableRedistributableFirmware = true;
+  hardware.firmware = [ pkgs.linux-firmware ];
 
   boot = {
     initrd.availableKernelModules = [ "usb_storage" "uas" "sd_mod" "thunderbolt" ];
