@@ -16,16 +16,13 @@
     enable = true;
     profiles.default = {
       extensions = with pkgs.vscode-marketplace; [
-        ftsamoyed.theme-pink-cat-boo
         ms-azuretools.vscode-containers
         ms-vscode-remote.remote-containers
         openai.chatgpt
-        rooveterinaryinc.roo-cline
-        saoudrizwan.claude-dev
         jnoortheen.nix-ide
+        pkgs.vscode-extensions.catppuccin.catppuccin-vsc-icons
+        pkgs.vscode-extensions.catppuccin.catppuccin-vsc
         vscodevim.vim
-        theqtcompany.qt-qml
-        # anthropic.claude-code
         mkhl.direnv
         dbaeumer.vscode-eslint
         editorconfig.editorconfig

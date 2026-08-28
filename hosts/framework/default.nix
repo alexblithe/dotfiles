@@ -4,7 +4,6 @@
   networking.hostName = "framework";
   imports = [
     ../common
-    ./disko.nix
     ../../modules/ai/llama-cpp.nix
     ../../modules/containerization
     ../../modules/desktop
@@ -167,13 +166,15 @@
     lm_sensors
     bluetuith # Bluetooth TUI
     llama-cpp
+    handbrake
+    libdvdcss
   ];
 
   home-manager.users.alex.home.stateVersion = "25.11";
   system.stateVersion = "25.11";
 
   services.ai-llama-server = {
-    enable = true;
+    enable = false;
     modelPresetFile = ../../modules/ai/model-files/framework.ini;
   };
 }
