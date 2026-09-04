@@ -46,9 +46,17 @@
   # hardware.amdgpu.opencl.enable = true;
   # hardware.amdgpu.initrd.enable = true;
   hardware.graphics.enable = true;
+  hardware.graphics.extraPackages = with pkgs; [
+    rocmPackages.clr.icd
+  ];
   hardware.nvidia-container-toolkit.enable = true;
   hardware.nvidia-container-toolkit.mount-nvidia-executables = true;
 
+
+  # Force VA-API to use Mesa's radeonsi driver
+  environment.sessionVariables = {
+    LIBVA_DRIVER_NAME = "radeonsi";
+  };
   hardware.nvidia = {
     # Modesetting is required
     modesetting.enable = true;
@@ -79,6 +87,8 @@
     rocmPackages.clr
     rustdesk-flutter
     llama-cpp
+    handbrake
+    libdvdcss
   ];
 
   # Allow Open WebUI (port 3000) on Tailscale only
