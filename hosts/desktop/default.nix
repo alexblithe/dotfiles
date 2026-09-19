@@ -1,4 +1,4 @@
-{ pkgs, config, lib, ...}:
+{ pkgs, config, ...}:
 
 {
   networking.hostName = "house-of-wind";
