@@ -28,6 +28,7 @@
     ../discord
     ../calibre
     ../opencode
+    ../codex
     ../claude-code
     ../zathura
     ../tmux

@@ -20,7 +20,13 @@
     extraPackages = with pkgs; [
       intel-media-driver
       intel-compute-runtime
+      vpl-gpu-rt
     ];
+  };
+
+  # Enable Intel GPU acceleration for VA-API
+  environment.sessionVariables = { 
+    LIBVA_DRIVER_NAME = "iHD"; 
   };
 
   # Allow Vulkan to allocate up to 60GB of system RAM for iGPU
@@ -165,9 +171,9 @@
     nvme-cli
     lm_sensors
     bluetuith # Bluetooth TUI
-    llama-cpp
     handbrake
     libdvdcss
+    abcde
   ];
 
   home-manager.users.alex.home.stateVersion = "25.11";
