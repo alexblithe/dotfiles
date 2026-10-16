@@ -1,6 +1,7 @@
 {
   "scripts": {
-    "dev": "ags run app.ts"
+    "dev": "ags run app.ts",
+    "rebuild:types": "ags types"
   },
   "dependencies": {
     "ags": "*",

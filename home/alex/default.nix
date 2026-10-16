@@ -29,6 +29,7 @@
     ../calibre
     ../opencode
     ../codex
+    ../antigravity
     ../claude-code
     ../zathura
     ../tmux
