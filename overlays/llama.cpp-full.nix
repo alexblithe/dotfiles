@@ -1,6 +1,6 @@
 
 llama-cpp-input: final: prev: {
-  llama-cpp =
+  llama-cpp-full =
     let
       # Call the llama.cpp package with all GPU backends (for desktop)
       llamaBase = (prev.callPackage "${llama-cpp-input}/.devops/nix/package.nix" {

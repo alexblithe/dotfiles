@@ -181,6 +181,7 @@
 
   services.ai-llama-server = {
     enable = false;
+    package = pkgs.llama-cpp-vulkan;
     modelPresetFile = ../../modules/ai/model-files/framework.ini;
   };
 }

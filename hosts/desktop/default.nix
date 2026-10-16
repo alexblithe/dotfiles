@@ -86,7 +86,7 @@
     rocmPackages.rocm-smi
     rocmPackages.clr
     rustdesk-flutter
-    llama-cpp
+    llama-cpp-full
     handbrake
     libdvdcss
   ];
@@ -98,6 +98,7 @@
 
   services.ai-llama-server = {
    enable = true;
+   package = pkgs.llama-cpp-full;
    host = "0.0.0.0";
    modelPresetFile = ../../modules/ai/model-files/desktop.ini;
   };

@@ -1,6 +1,6 @@
 
 llama-cpp-input: final: prev: {
-  llama-cpp =
+  llama-cpp-vulkan =
     let
       # Call the llama.cpp package with Vulkan only (for framework)
       llamaBase = (prev.callPackage "${llama-cpp-input}/.devops/nix/package.nix" {
