@@ -11,6 +11,7 @@
     };
     hyprland = {
       url = "github:hyprwm/Hyprland";
+      inputs.nixpkgs.follows = "nixpkgs";
     };
     disko = {
       url = "github:nix-community/disko";

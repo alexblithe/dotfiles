@@ -41,6 +41,10 @@
         pkgs.libadwaita
         pkgs.libsoup_3
       ];
+
+    agsPackage = ags.packages.${system}.default.override {
+      inherit extraPackages;
+    };
   in {
     packages.${system} = {
       default = pkgs.stdenv.mkDerivation {
@@ -70,11 +74,14 @@
 
     devShells.${system} = {
       default = pkgs.mkShell {
-        buildInputs = [
-          (ags.packages.${system}.default.override {
-            inherit extraPackages;
-          })
-        ];
+        buildInputs = [agsPackage pkgs.coreutils];
+
+        shellHook = ''
+          mkdir -p node_modules
+          if [ ! -e node_modules/ags ]; then
+            ln -s ${agsPackage.jsPackage} node_modules/ags
+          fi
+        '';
       };
     };
   };
