@@ -18,3 +18,4 @@ This repo is my personal dotfiles, it uses nixos and works with multiple machine
   - `overlays` contains custom nixpkgs overlays used in the configuration
   - `scripts` - custom ZSH scripts
   - `secrets` - contains secrets used in the configuration uses SOPS to manage secrets
+  - `reference` - Any 3rd party doc repos such as the hypr wiki

@@ -1,4 +1,6 @@
 {
+  config,
+  inputs,
   pkgs,
   lib,
   hostname ? "",
@@ -290,4 +292,9 @@
       ];
     };
   };
+  xdg.configFile."hypr" = {
+    source = config.lib.file.mkOutOfStoreSymlink "${inputs.self}/home/hyprland/hyprland";
+    force = true;
+    recursive = true;
+};
 }

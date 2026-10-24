@@ -28,7 +28,7 @@
         editorconfig.editorconfig
         ms-azuretools.vscode-docker
         ms-vscode.makefile-tools
-
+        sumneko.lua
       ];
       userSettings = {
         "github.copilot.nextEditSuggestions.enabled" = true;

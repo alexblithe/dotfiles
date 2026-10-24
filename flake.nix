@@ -102,7 +102,7 @@
               home-manager.users.alex = import ./home/alex;
               home-manager.extraSpecialArgs = {
                 hostname = "thinkpad";
-                inherit catppuccin;
+                inherit catppuccin inputs self;
               };
             }
             ./hosts/thinkpad
@@ -126,7 +126,7 @@
               home-manager.users.alex = import ./home/alex;
               home-manager.extraSpecialArgs = {
                 hostname = "framework";
-                inherit catppuccin;
+                inherit catppuccin inputs self;
               };
             }
             {
@@ -154,7 +154,7 @@
               home-manager.users.alex = import ./home/alex;
               home-manager.extraSpecialArgs = {
                 hostname = "house-of-wind";
-                inherit catppuccin;
+                inherit catppuccin inputs self;
               };
             }
             {
@@ -183,7 +183,7 @@
               home-manager.users.alex = import ./home/luna;
               home-manager.extraSpecialArgs = {
                 hostname = "luna";
-                inherit catppuccin;
+                inherit catppuccin inputs self;
               };
             }
             ./hosts/luna
@@ -205,7 +205,7 @@
             home-manager.users.michaelblithe = import ./home/macbook;
             home-manager.extraSpecialArgs = {
               hostname = "macbook";
-              inherit catppuccin;
+              inherit catppuccin inputs self;
             };
           }
           ./hosts/macbook
