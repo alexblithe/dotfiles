@@ -67,6 +67,8 @@
           "${pkgs.kdePackages.qtdeclarative}/lib/qt-6/qml"
           "${pkgs.quickshell}/lib/qt-6/qml"
         ];
+        "git.confirmSync" = false;
+        "workbench.colorTheme" = "Catppuccin Macchiato";
         "vim.leader" = "<space>";
         "vim.normalModeKeyBindings" = [
           # Focus previous tab at the left
