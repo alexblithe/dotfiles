@@ -32,6 +32,7 @@
     ../antigravity
     ../claude-code
     ../zathura
+    ../quickshell
     ../tmux
     ../spotify
     ../lmstudio

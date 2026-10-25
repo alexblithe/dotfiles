@@ -171,7 +171,7 @@
     nvme-cli
     lm_sensors
     bluetuith # Bluetooth TUI
-    handbrake
+    # handbrake
     libdvdcss
     abcde
   ];

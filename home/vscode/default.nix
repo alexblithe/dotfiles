@@ -61,6 +61,12 @@
         "claudeCode.preferredLocation" = "panel";
         "window.commandCenter" = false;
         "workbench.navigationControl.enabled" = false;
+        "qt-qml.qmlls.useQmlImportPathEnvVar" = true;
+        "qt-qml.qmlls.customExePath" = "${pkgs.kdePackages.qtdeclarative}/bin/qmlls";
+        "qt-qml.qmlls.additionalImportPaths" = [
+          "${pkgs.kdePackages.qtdeclarative}/lib/qt-6/qml"
+          "${pkgs.quickshell}/lib/qt-6/qml"
+        ];
         "vim.leader" = "<space>";
         "vim.normalModeKeyBindings" = [
           # Focus previous tab at the left

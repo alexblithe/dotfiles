@@ -226,7 +226,13 @@
               nixpkgs-fmt
               statix
               deadnix
+              kdePackages.qtdeclarative
             ];
+            shellHook= ''
+              # Help qmlls find Qt and Quickshell QML type declarations
+              export QMLLS_BUILD_DIRS=${pkgs.kdePackages.qtdeclarative}/lib/qt-6/qml/:${pkgs.quickshell}/lib/qt-6/qml/
+              export QML_IMPORT_PATH=QML_IMPORT_PATH=${pkgs.kdePackages.qtdeclarative}/lib/qt-6/qml:${pkgs.quickshell}/lib/qt-6/qml:$PWD/src
+            '';
           };
         }
       );
