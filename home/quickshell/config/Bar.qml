@@ -19,6 +19,10 @@ Scope {
             ClockWidget {
                 anchors.centerIn: parent
             }
+            BatteryWidget {
+                anchors.right: parent.right
+                anchors.verticalCenter: parent.verticalCenter
+            }
         }
     }
 }

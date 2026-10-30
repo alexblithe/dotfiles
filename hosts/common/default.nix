@@ -69,7 +69,7 @@
       python3
       xq
       ncdu
-      browsh
+      papirus-icon-theme
     ]
   );
 }
