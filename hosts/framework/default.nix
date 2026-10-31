@@ -1,5 +1,4 @@
 { pkgs, lib, ... }:
-
 {
   networking.hostName = "framework";
   imports = [
@@ -174,6 +173,7 @@
     # handbrake
     libdvdcss
     abcde
+    (pkgs.callPackage ../../modules/unsloth { })
   ];
 
   home-manager.users.alex.home.stateVersion = "25.11";
