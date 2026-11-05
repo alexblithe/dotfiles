@@ -23,6 +23,10 @@ Scope {
                 anchors.right: parent.right
                 anchors.verticalCenter: parent.verticalCenter
             }
+            Workspaces {
+                anchors.left: parent.left
+                anchors.verticalCenter: parent.verticalCenter
+            }
         }
     }
 }
