@@ -27,7 +27,7 @@
     ../direnv
     ../discord
     ../calibre
-    ../opencode
+    # ../opencode
     ../codex
     ../antigravity
     ../claude-code
