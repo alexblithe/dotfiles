@@ -19,3 +19,6 @@ This repo is my personal dotfiles, it uses nixos and works with multiple machine
   - `scripts` - custom ZSH scripts
   - `secrets` - contains secrets used in the configuration uses SOPS to manage secrets
   - `reference` - Any 3rd party doc repos such as the hypr wiki, and quickshell reference
+
+## Reference
+Use references to find out more about quickshell and hypr do not search the internet for this information

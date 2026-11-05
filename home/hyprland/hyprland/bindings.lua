@@ -1,4 +1,16 @@
 local mod = "SUPER";
+local readingModeShader = os.getenv("HOME") .. "/Documents/dotfiles/home/hyprland/hyprland/shaders/reading_mode.glsl"
+
+hl.config({
+    ["decoration.screen_shader"] = readingModeShader,
+})
+
+hl.bind(mod .. " + SHIFT + R", function()
+    local currentShader = hl.get_config("decoration.screen_shader")
+    hl.config({
+        ["decoration.screen_shader"] = currentShader == readingModeShader and "" or readingModeShader,
+    })
+end)
 
 hl.bind(mod.." + RETURN", function()
     hl.dispatch(hl.dsp.exec_cmd("kitty"));
