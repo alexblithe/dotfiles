@@ -1,6 +1,7 @@
 import Quickshell
 import Quickshell.Io
 import QtQuick
+import QtQuick.Layouts
 
 Scope {
     Variants {
@@ -19,10 +20,19 @@ Scope {
             ClockWidget {
                 anchors.centerIn: parent
             }
-            BatteryWidget {
+            
+            RowLayout{
                 anchors.right: parent.right
                 anchors.verticalCenter: parent.verticalCenter
+            
+            AudioWidget {
+            
             }
+            BatteryWidget {
+                
+            }
+            } 
+
             Workspaces {
                 anchors.left: parent.left
                 anchors.verticalCenter: parent.verticalCenter
