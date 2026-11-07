@@ -226,6 +226,7 @@
               nixpkgs-fmt
               statix
               deadnix
+              bubblewrap
               kdePackages.qtdeclarative
             ];
             shellHook= ''

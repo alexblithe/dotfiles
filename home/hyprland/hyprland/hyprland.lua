@@ -1,4 +1,5 @@
 require('bindings')
 require('monitor')
 require('touchpad')
+require('visuals')
 require('execs')
